@@ -1,0 +1,145 @@
+{
+ "name": "ev_charge_strong",
+ "title": "실차 충전 — 평균 전류가 가장 큰 구간",
+ "rows": 211,
+ "duration_min": 35.0,
+ "soc_start": 13.0,
+ "soc_end": 60.0,
+ "current_mean_a": -110.1,
+ "probe_max_start_c": 29.0,
+ "probe_max_peak_c": 39.0,
+ "probe_cells": [
+  [
+   0,
+   1
+  ],
+  [
+   0,
+   4
+  ],
+  [
+   0,
+   7
+  ],
+  [
+   0,
+   10
+  ],
+  [
+   1,
+   1
+  ],
+  [
+   1,
+   4
+  ],
+  [
+   1,
+   7
+  ],
+  [
+   1,
+   10
+  ],
+  [
+   2,
+   1
+  ],
+  [
+   2,
+   4
+  ],
+  [
+   2,
+   7
+  ],
+  [
+   2,
+   10
+  ],
+  [
+   3,
+   1
+  ],
+  [
+   3,
+   4
+  ],
+  [
+   3,
+   7
+  ],
+  [
+   3,
+   10
+  ],
+  [
+   4,
+   1
+  ],
+  [
+   4,
+   4
+  ],
+  [
+   4,
+   7
+  ],
+  [
+   4,
+   10
+  ],
+  [
+   5,
+   1
+  ],
+  [
+   5,
+   4
+  ],
+  [
+   5,
+   7
+  ],
+  [
+   5,
+   10
+  ],
+  [
+   6,
+   1
+  ],
+  [
+   6,
+   4
+  ],
+  [
+   6,
+   7
+  ],
+  [
+   6,
+   10
+  ],
+  [
+   7,
+   1
+  ],
+  [
+   7,
+   4
+  ],
+  [
+   7,
+   7
+  ],
+  [
+   7,
+   10
+  ]
+ ],
+ "probe_position_assumed": true,
+ "source": "300-EV field data (Changan), 96S NCM 155 Ah",
+ "license": "MIT",
+ "citation": "Liu, H., Li, C., Hu, X. et al. Multi-modal framework for battery state of health evaluation using open-source electric vehicle data. Nat Commun 16, 1137 (2025). https://doi.org/10.1038/s41467-025-56485-7"
+}

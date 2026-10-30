@@ -1,0 +1,208 @@
+{
+ "generated_at": "2026-10-28 19:52",
+ "seconds": 10.3,
+ "method": "급속충전 25분, 마지막 추정값. new = 온도 보정 역산 + 조건부 느린 갱신 + 95 % 구간, old = v0.4 이전 방식",
+ "grid_soh85": [
+  {
+   "true": 85.0,
+   "ambient_c": 10,
+   "flow_lpm": 3,
+   "power_kw": 150.0,
+   "new": 84.8,
+   "lo": 84.3,
+   "hi": 85.4,
+   "old": 83.4,
+   "updates": 441,
+   "skipped": 43,
+   "core_max_c": 31.94,
+   "covered": true
+  },
+  {
+   "true": 85.0,
+   "ambient_c": 10,
+   "flow_lpm": 10,
+   "power_kw": 150.0,
+   "new": 84.9,
+   "lo": 84.3,
+   "hi": 85.4,
+   "old": 83.7,
+   "updates": 457,
+   "skipped": 27,
+   "core_max_c": 27.99,
+   "covered": true
+  },
+  {
+   "true": 85.0,
+   "ambient_c": 10,
+   "flow_lpm": 20,
+   "power_kw": 150.0,
+   "new": 84.9,
+   "lo": 84.3,
+   "hi": 85.5,
+   "old": 83.8,
+   "updates": 457,
+   "skipped": 27,
+   "core_max_c": 26.17,
+   "covered": true
+  },
+  {
+   "true": 85.0,
+   "ambient_c": 25,
+   "flow_lpm": 3,
+   "power_kw": 150.0,
+   "new": 84.9,
+   "lo": 84.4,
+   "hi": 85.3,
+   "old": 81.9,
+   "updates": 457,
+   "skipped": 27,
+   "core_max_c": 40.24,
+   "covered": true
+  },
+  {
+   "true": 85.0,
+   "ambient_c": 25,
+   "flow_lpm": 10,
+   "power_kw": 150.0,
+   "new": 84.9,
+   "lo": 84.4,
+   "hi": 85.4,
+   "old": 82.8,
+   "updates": 457,
+   "skipped": 27,
+   "core_max_c": 31.52,
+   "covered": true
+  },
+  {
+   "true": 85.0,
+   "ambient_c": 25,
+   "flow_lpm": 20,
+   "power_kw": 150.0,
+   "new": 84.9,
+   "lo": 84.3,
+   "hi": 85.4,
+   "old": 83.2,
+   "updates": 427,
+   "skipped": 57,
+   "core_max_c": 28.4,
+   "covered": true
+  },
+  {
+   "true": 85.0,
+   "ambient_c": 40,
+   "flow_lpm": 3,
+   "power_kw": 150.0,
+   "new": 84.9,
+   "lo": 84.2,
+   "hi": 85.7,
+   "old": 80.2,
+   "updates": 45,
+   "skipped": 439,
+   "core_max_c": 49.52,
+   "covered": true
+  },
+  {
+   "true": 85.0,
+   "ambient_c": 40,
+   "flow_lpm": 10,
+   "power_kw": 150.0,
+   "new": 85.0,
+   "lo": 84.3,
+   "hi": 85.7,
+   "old": 81.7,
+   "updates": 279,
+   "skipped": 206,
+   "core_max_c": 35.19,
+   "covered": true
+  },
+  {
+   "true": 85.0,
+   "ambient_c": 40,
+   "flow_lpm": 20,
+   "power_kw": 150.0,
+   "new": 84.9,
+   "lo": 84.2,
+   "hi": 85.7,
+   "old": 82.4,
+   "updates": 159,
+   "skipped": 343,
+   "core_max_c": 31.15,
+   "covered": true
+  }
+ ],
+ "levels": [
+  {
+   "true": 95.0,
+   "ambient_c": 25,
+   "flow_lpm": 10,
+   "power_kw": 150.0,
+   "new": 94.7,
+   "lo": 93.6,
+   "hi": 96.0,
+   "old": 93.4,
+   "updates": 511,
+   "skipped": 30,
+   "core_max_c": 31.35,
+   "covered": true
+  },
+  {
+   "true": 85.0,
+   "ambient_c": 25,
+   "flow_lpm": 10,
+   "power_kw": 150.0,
+   "new": 84.9,
+   "lo": 84.4,
+   "hi": 85.4,
+   "old": 82.8,
+   "updates": 457,
+   "skipped": 27,
+   "core_max_c": 31.52,
+   "covered": true
+  },
+  {
+   "true": 75.0,
+   "ambient_c": 25,
+   "flow_lpm": 10,
+   "power_kw": 150.0,
+   "new": 75.0,
+   "lo": 74.6,
+   "hi": 75.3,
+   "old": 71.1,
+   "updates": 361,
+   "skipped": 66,
+   "core_max_c": 32.97,
+   "covered": true
+  }
+ ],
+ "harsh": [
+  {
+   "true": 70.0,
+   "ambient_c": 40,
+   "flow_lpm": 3,
+   "power_kw": 200.0,
+   "new": null,
+   "lo": null,
+   "hi": null,
+   "old": 66.0,
+   "updates": 12,
+   "skipped": 411,
+   "core_max_c": 34.3,
+   "covered": false
+  }
+ ],
+ "summary": {
+  "new": {
+   "max_abs_err": 0.2,
+   "spread": 0.2,
+   "mean_err": -0.1,
+   "n": 9
+  },
+  "old": {
+   "max_abs_err": 4.8,
+   "spread": 3.6,
+   "mean_err": -2.43,
+   "n": 9
+  },
+  "coverage": "12/13"
+ }
+}
