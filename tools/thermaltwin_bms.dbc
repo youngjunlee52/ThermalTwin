@@ -1,0 +1,57 @@
+VERSION "ThermalTwin BMS example 0.4"
+
+
+NS_ :
+	CM_
+	BA_DEF_
+	BA_
+
+BS_:
+
+BU_: BMS TT_GATEWAY
+
+
+BO_ 256 BMS_PackStatus: 8 BMS
+ SG_ PackCurrent : 0|16@1- (0.1,0) [-2000|2000] "A" TT_GATEWAY
+ SG_ PackSOC : 16|10@1+ (0.1,0) [0|100] "%" TT_GATEWAY
+ SG_ CoolantInletTemp : 32|8@1+ (0.5,-40) [-40|87.5] "degC" TT_GATEWAY
+ SG_ AmbientTemp : 40|8@1+ (0.5,-40) [-40|87.5] "degC" TT_GATEWAY
+ SG_ RollingCounter : 48|4@1+ (1,0) [0|15] "" TT_GATEWAY
+
+BO_ 257 BMS_Uptime: 8 BMS
+ SG_ UptimeSec : 0|32@1+ (0.1,0) [0|429496729.5] "s" TT_GATEWAY
+
+BO_ 512 BMS_CellVoltages: 8 BMS
+ SG_ CellBlock : 0|8@1+ (1,0) [0|23] "" TT_GATEWAY
+ SG_ CellV0 : 8|12@1+ (0.001,1) [1|5.095] "V" TT_GATEWAY
+ SG_ CellV1 : 20|12@1+ (0.001,1) [1|5.095] "V" TT_GATEWAY
+ SG_ CellV2 : 32|12@1+ (0.001,1) [1|5.095] "V" TT_GATEWAY
+ SG_ CellV3 : 44|12@1+ (0.001,1) [1|5.095] "V" TT_GATEWAY
+
+BO_ 768 BMS_ProbeTemps: 8 BMS
+ SG_ ProbeBlock : 0|8@1+ (1,0) [0|15] "" TT_GATEWAY
+ SG_ ProbeT0 : 8|9@1+ (0.5,-40) [-40|215.5] "degC" TT_GATEWAY
+ SG_ ProbeT1 : 17|9@1+ (0.5,-40) [-40|215.5] "degC" TT_GATEWAY
+ SG_ ProbeT2 : 26|9@1+ (0.5,-40) [-40|215.5] "degC" TT_GATEWAY
+ SG_ ProbeT3 : 35|9@1+ (0.5,-40) [-40|215.5] "degC" TT_GATEWAY
+ SG_ ProbeT4 : 44|9@1+ (0.5,-40) [-40|215.5] "degC" TT_GATEWAY
+ SG_ ProbeT5 : 53|9@1+ (0.5,-40) [-40|215.5] "degC" TT_GATEWAY
+
+BO_ 1024 TT_Command: 8 TT_GATEWAY
+ SG_ ChargeLimitKw : 0|16@1+ (0.1,0) [0|6553.5] "kW" BMS
+ SG_ CoolantFlowLpm : 16|10@1+ (0.1,0) [0|102.3] "L/min" BMS
+ SG_ CoolantSetTemp : 26|8@1+ (0.5,-40) [-40|87.5] "degC" BMS
+ SG_ DeratePct : 34|7@1+ (1,0) [0|100] "%" BMS
+ SG_ RiskLevel : 41|2@1+ (1,0) [0|2] "" BMS
+ SG_ CmdCounter : 44|4@1+ (1,0) [0|15] "" BMS
+ SG_ ControlMode : 48|2@1+ (1,0) [0|3] "" BMS
+
+
+CM_ BU_ BMS "Battery management system (example layout, replace with the vehicle's real DBC)";
+CM_ BU_ TT_GATEWAY "ThermalTwin CAN gateway (tools/can_gateway.py)";
+CM_ BO_ 512 "96 cell voltages in 24 blocks of 4. Cell index = CellBlock*4 + n";
+CM_ BO_ 768 "Temperature probes in blocks of 6. Probe index = ProbeBlock*6 + n. Raw 0x1FF = signal not available. Probe positions come from the probe map JSON, not from CAN";
+CM_ BO_ 1024 "ThermalTwin ADVISORY command. The BMS must not apply it without its own ISO 26262 safety mechanisms";
+CM_ SG_ 1024 RiskLevel "0 Safe, 1 Warning, 2 Danger";
+CM_ SG_ 1024 ControlMode "0 twin (AI estimate), 1 fallback (rule based: max probe + margin), 2 off";
+CM_ SG_ 1024 CmdCounter "Watchdog: if CmdCounter does not change for 3 s the BMS must ignore TT_Command and use its own rules";

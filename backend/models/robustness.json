@@ -1,0 +1,296 @@
+{
+ "generated_at": "2026-10-28 19:50",
+ "seconds": 22.4,
+ "conditions": "급속충전 150 kW · 25 °C · 10 L/min · 균등 센서 16개 · 25분 · 고장 시작 240 s",
+ "rows": [
+  {
+   "name": "정상 (고장 없음)",
+   "kind": "none",
+   "before": {
+    "core_rmse_k": 0.29,
+    "hottest_cell_underestimate_k": -0.38,
+    "peak_true_c": 40.6,
+    "peak_est_c": 42.0,
+    "fault_cell_max_underestimate_k": null,
+    "sensor_flagged_after_s": null,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   },
+   "after": {
+    "core_rmse_k": 0.29,
+    "hottest_cell_underestimate_k": -0.38,
+    "peak_true_c": 40.6,
+    "peak_est_c": 42.0,
+    "fault_cell_max_underestimate_k": null,
+    "sensor_flagged_after_s": null,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   }
+  },
+  {
+   "name": "센서 없는 셀 M2-C2 냉각 불량 (냉각 10 %)",
+   "kind": "cooling",
+   "before": {
+    "core_rmse_k": 0.68,
+    "hottest_cell_underestimate_k": 4.62,
+    "peak_true_c": 40.4,
+    "peak_est_c": 41.4,
+    "fault_cell_max_underestimate_k": 10.18,
+    "sensor_flagged_after_s": null,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   },
+   "after": {
+    "core_rmse_k": 0.68,
+    "hottest_cell_underestimate_k": 4.62,
+    "peak_true_c": 40.4,
+    "peak_est_c": 41.4,
+    "fault_cell_max_underestimate_k": 10.18,
+    "sensor_flagged_after_s": null,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   }
+  },
+  {
+   "name": "센서 달린 셀 M2-C5 냉각 불량 (냉각 10 %)",
+   "kind": "cooling",
+   "before": {
+    "core_rmse_k": 2.46,
+    "hottest_cell_underestimate_k": -1.36,
+    "peak_true_c": 40.1,
+    "peak_est_c": 46.9,
+    "fault_cell_max_underestimate_k": 0.11,
+    "sensor_flagged_after_s": null,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   },
+   "after": {
+    "core_rmse_k": 1.63,
+    "hottest_cell_underestimate_k": -1.59,
+    "peak_true_c": 39.8,
+    "peak_est_c": 51.4,
+    "fault_cell_max_underestimate_k": 0.11,
+    "sensor_flagged_after_s": -30.0,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   }
+  },
+  {
+   "name": "센서 M5-C2 −8 K 치우침 (차갑게 읽음)",
+   "kind": "offset",
+   "before": {
+    "core_rmse_k": 2.48,
+    "hottest_cell_underestimate_k": 0.2,
+    "peak_true_c": 39.6,
+    "peak_est_c": 40.1,
+    "fault_cell_max_underestimate_k": null,
+    "sensor_flagged_after_s": null,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   },
+   "after": {
+    "core_rmse_k": 0.3,
+    "hottest_cell_underestimate_k": -0.32,
+    "peak_true_c": 40.6,
+    "peak_est_c": 41.9,
+    "fault_cell_max_underestimate_k": null,
+    "sensor_flagged_after_s": 30.0,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   }
+  },
+  {
+   "name": "센서 M5-C2 +8 K 치우침 (뜨겁게 읽음)",
+   "kind": "offset",
+   "before": {
+    "core_rmse_k": 2.15,
+    "hottest_cell_underestimate_k": -0.49,
+    "peak_true_c": 39.2,
+    "peak_est_c": 47.2,
+    "fault_cell_max_underestimate_k": null,
+    "sensor_flagged_after_s": null,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   },
+   "after": {
+    "core_rmse_k": 1.88,
+    "hottest_cell_underestimate_k": -0.49,
+    "peak_true_c": 37.5,
+    "peak_est_c": 48.9,
+    "fault_cell_max_underestimate_k": null,
+    "sensor_flagged_after_s": 30.0,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   }
+  },
+  {
+   "name": "센서 M5-C2 값 고착",
+   "kind": "stuck",
+   "before": {
+    "core_rmse_k": 0.39,
+    "hottest_cell_underestimate_k": -0.38,
+    "peak_true_c": 40.6,
+    "peak_est_c": 42.0,
+    "fault_cell_max_underestimate_k": null,
+    "sensor_flagged_after_s": null,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   },
+   "after": {
+    "core_rmse_k": 0.33,
+    "hottest_cell_underestimate_k": -0.38,
+    "peak_true_c": 40.6,
+    "peak_est_c": 41.9,
+    "fault_cell_max_underestimate_k": null,
+    "sensor_flagged_after_s": 300.0,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   }
+  },
+  {
+   "name": "센서 M5-C2 서서히 어긋남 (−0.6 K/분)",
+   "kind": "drift",
+   "before": {
+    "core_rmse_k": 1.83,
+    "hottest_cell_underestimate_k": 0.44,
+    "peak_true_c": 40.6,
+    "peak_est_c": 41.9,
+    "fault_cell_max_underestimate_k": null,
+    "sensor_flagged_after_s": null,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   },
+   "after": {
+    "core_rmse_k": 0.3,
+    "hottest_cell_underestimate_k": -0.38,
+    "peak_true_c": 40.6,
+    "peak_est_c": 41.9,
+    "fault_cell_max_underestimate_k": null,
+    "sensor_flagged_after_s": 180.0,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   }
+  },
+  {
+   "name": "센서 절반(8개) 통신 끊김",
+   "kind": "dropout",
+   "before": {
+    "core_rmse_k": 0.35,
+    "hottest_cell_underestimate_k": -0.35,
+    "peak_true_c": 40.6,
+    "peak_est_c": 42.1,
+    "fault_cell_max_underestimate_k": null,
+    "sensor_flagged_after_s": null,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   },
+   "after": {
+    "core_rmse_k": 0.35,
+    "hottest_cell_underestimate_k": -0.35,
+    "peak_true_c": 40.6,
+    "peak_est_c": 42.1,
+    "fault_cell_max_underestimate_k": null,
+    "sensor_flagged_after_s": null,
+    "false_sensor_flags": 0,
+    "hotspot_flagged_after_s": null
+   }
+  }
+ ],
+ "cooling_coverage": [
+  {
+   "n_sensors": 8,
+   "where": "센서에서 가장 먼 셀",
+   "cell": [
+    1,
+    4
+   ],
+   "fault_cell_max_underestimate_k": 9.38,
+   "hottest_cell_underestimate_k": 5.3
+  },
+  {
+   "n_sensors": 8,
+   "where": "센서 바로 옆 셀",
+   "cell": [
+    1,
+    9
+   ],
+   "fault_cell_max_underestimate_k": 7.45,
+   "hottest_cell_underestimate_k": 5.89
+  },
+  {
+   "n_sensors": 16,
+   "where": "센서에서 가장 먼 셀",
+   "cell": [
+    1,
+    1
+   ],
+   "fault_cell_max_underestimate_k": 10.18,
+   "hottest_cell_underestimate_k": 4.62
+  },
+  {
+   "n_sensors": 16,
+   "where": "센서 바로 옆 셀",
+   "cell": [
+    1,
+    5
+   ],
+   "fault_cell_max_underestimate_k": 10.75,
+   "hottest_cell_underestimate_k": 8.27
+  },
+  {
+   "n_sensors": 16,
+   "where": "센서가 달린 셀",
+   "cell": [
+    1,
+    4
+   ],
+   "fault_cell_max_underestimate_k": 0.11,
+   "hottest_cell_underestimate_k": -1.59
+  },
+  {
+   "n_sensors": 32,
+   "where": "센서에서 가장 먼 셀",
+   "cell": [
+    1,
+    1
+   ],
+   "fault_cell_max_underestimate_k": 10.13,
+   "hottest_cell_underestimate_k": 4.66
+  },
+  {
+   "n_sensors": 32,
+   "where": "센서 바로 옆 셀",
+   "cell": [
+    1,
+    3
+   ],
+   "fault_cell_max_underestimate_k": 10.09,
+   "hottest_cell_underestimate_k": 5.9
+  },
+  {
+   "n_sensors": 48,
+   "where": "센서에서 가장 먼 셀",
+   "cell": [
+    1,
+    2
+   ],
+   "fault_cell_max_underestimate_k": 9.9,
+   "hottest_cell_underestimate_k": 5.26
+  },
+  {
+   "n_sensors": 48,
+   "where": "센서 바로 옆 셀",
+   "cell": [
+    1,
+    2
+   ],
+   "fault_cell_max_underestimate_k": 9.9,
+   "hottest_cell_underestimate_k": 5.26
+  }
+ ],
+ "finding": "셀 사이 단열 패드(R_LAT 4 K/W) 때문에 한 셀의 국부 과열은 이웃 셀 센서에 거의 전달되지 않음. 센서를 48개로 늘려도, 센서 바로 옆이어도 냉각 불량 셀을 약 10 K 낮게 봄 → 셀 단위 냉각 불량은 그 셀에 센서가 있어야만 관측 가능. 대책은 센서 증설이 아니라 조립 공정 검사(갭필러 접촉), 셀별 온도 측정 (셀마다 NTC·플렉서블 PCB), 또는 임피던스 기반 셀 온도 측정 같은 하드웨어 쪽.",
+ "tried_not_adopted": [
+  "셀 전압으로 숨은 과열 역산 (저항 −2.7 %/K): 셀 간 원래 저항 편차(0.85–1.42배)에 묻혀 냉각 불량 셀을 구분하지 못함",
+  "모듈별 냉각수 출구온도 열수지: 정상 상태의 모델-실제 차이(모듈당 ±20–50 W)가 냉각 불량 신호(약 20 W)보다 커서 구분 불가"
+ ]
+}

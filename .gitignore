@@ -1,0 +1,14 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+logs/
+*.db
+backend/certs/
+release/
+build/
+dist_exe/
+web_demo/
+.ruff_cache/
+.claude/
+제출서류/

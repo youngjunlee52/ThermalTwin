@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* 엔지니어링 툴용 다크 테마 (중립 회색 계열 + 데이터 색상은 lib/colors.ts) */
+@theme {
+  --color-page: #0d0d0d;
+  --color-panel: #1a1a19;
+  --color-panel-2: #232322;
+  --color-line: #2c2c2a;
+  --color-axis: #383835;
+  --color-ink: #f0efec;
+  --color-ink-2: #c3c2b7;
+  --color-muted: #898781;
+  --color-accent: #3987e5;
+
+  --color-good: #0ca30c;
+  --color-warning: #fab219;
+  --color-serious: #ec835a;
+  --color-critical: #d03b3b;
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", Consolas, Menlo, monospace;
+
+  /* Danger 상태 붉은 깜빡임 → 클래스: animate-danger-blink */
+  --animate-danger-blink: danger-blink 1s ease-in-out infinite;
+  @keyframes danger-blink {
+    0%, 100% {
+      background-color: rgb(208 59 59 / 0.10);
+      box-shadow: 0 0 0 0 rgb(208 59 59 / 0);
+    }
+    50% {
+      background-color: rgb(208 59 59 / 0.32);
+      box-shadow: 0 0 24px 2px rgb(208 59 59 / 0.5);
+    }
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+input[type="range"] {
+  accent-color: var(--color-accent);
+}
+
+/* 스크롤바 */
+* {
+  scrollbar-color: #383835 transparent;
+  scrollbar-width: thin;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-danger-blink {
+    animation: none;
+    background-color: rgb(208 59 59 / 0.25);
+  }
+}
